@@ -1,0 +1,69 @@
+.parthners {
+    position: relative;
+    z-index: 0;
+    padding: rem(60px) 0;
+    background: url(../img/bg-section-light.jpg) center 0 / cover fixed;
+    &:before {
+        content: '';
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: linear-gradient(to bottom, #fff, transparentize(#fff, 1) 30%);
+    }
+}
+.parthners__container {
+    @extend .container;
+    position: relative;
+    z-index: 1;
+}
+.parthners__box {
+    @extend .clearfix;
+    margin: rem(100px) 0 0 0;
+    font-size: 0;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.parthners__item {
+    display: inline-block;
+    vertical-align: middle;
+    width: 25.3%;
+    margin: 0 4% rem(40px) 4%;
+    text-align: center;
+    img {
+        display: inline-block;
+        vertical-align: middle;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width : 1130px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+
+}
+@media only screen and (max-width : 768px) {
+
+}
+@media only screen and (max-width : 640px) {
+    .parthners__item {
+        width: 40%;
+        margin: 0 5% rem(40px) 5%;
+    }
+}
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 320px) {
+
+}

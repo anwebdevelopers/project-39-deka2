@@ -1,0 +1,201 @@
+.about__main {
+    position: relative;
+    padding: rem(60px) 0;
+    background: url(../img/bg-section-light.jpg) center 0 / cover fixed;
+    &:before {
+        content: '';
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: linear-gradient(to bottom, #fff, transparentize(#fff, 1) 30%);
+    }
+}
+.about__main-container {
+    @extend .container;
+    position: relative;
+    z-index: 1;
+}
+.about__main-box {
+    @extend .clearfix;
+}
+.about__main-photo {
+    position: relative;
+    float: right;
+    width: 35%;
+}
+.about__main-photo-img {
+    text-align: right;
+    img {
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
+}
+.about__main-photo-text {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: rem(15px);
+    border-radius: 3px;
+    background-color: transparentize(#fff, .05);
+    border: 2px solid #ececec;
+    box-shadow: 0 1px 2px 0 transparentize(#000, .9);
+    font-size: rem(16px);
+    b {
+        color: $accent-color;
+    }
+    a {
+        font-weight: 400;
+        color: $accent-color;
+    }
+}
+.ui-tooltip {
+    border: 2px solid #ececec !important;
+    box-shadow: 0 1px 2px 0 transparentize(#000, .9) !important;
+    font-size: rem(16px) !important;
+    line-height: 1.2 !important;
+
+    color: transparentize($font-color, .4) !important;
+}
+.about__main-text {
+    float: left;
+    width: 63%;
+    margin: rem(100px) 2% 0 0;
+    font-size: rem(17px);
+    line-height: 1.2;
+    text-align: justify;
+    border-bottom: 1px solid #cfced6;
+    p {
+        margin: rem(10px) 0;
+    }
+    b {
+        font-weight: 400;
+    }
+}
+.about__main-video {
+    float: left;
+    width: 63%;
+    margin: 0 2% 0 0;
+    font-size: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.about__main-video-item {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    margin: rem(35px) 5% 0 0;
+    overflow: hidden;
+    border-radius: 3px;
+    border: 2px solid #e9e9e9;
+    box-shadow: 0 1px 2px 0 transparentize(#000, .9);
+    &:nth-child(3n+3) {
+        margin: rem(35px) 0 0 0;
+    }
+    img {
+        width: 100%;
+        height: auto;
+        transition: all .5s ease;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-image: url(../img/spritesheet.png);
+        background-repeat: no-repeat;
+        width: 44px;
+        height: 44px;
+        background-position: -342px -129px;
+        background-color: transparentize(#fff, .3);
+        border-radius: 50%;
+        box-shadow: 0 0 30px 1px #fff;
+        transition: all .5s ease;
+    }
+
+    &:hover, &:active, &:focus {
+        img {
+            transform: scale(1.1);
+        }
+        &:before {
+            opacity: .5;
+            box-shadow: none;
+        }
+    }
+}
+
+.about__additional {
+    padding: rem(80px) 0;
+    box-shadow:inset 0 0 38px 1px transparentize(#000, .9);
+}
+.about__additional-container {
+    @extend .container;
+}
+.about__additional-text {
+    font-size: rem(18px);
+    line-height: 1.3;
+    text-align: justify;
+    p {
+        margin: rem(20px) 0;
+    }
+    b {
+        font-weight: 400;
+    }
+}
+
+@media only screen and (max-width : 1130px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+    .about__main-video-item {
+        width: 32%;
+        margin: rem(35px) 2% 0 0;
+        &:nth-child(3n+3) {
+            margin: rem(35px) 0 0 0;
+        }
+    }
+}
+@media only screen and (max-width : 768px) {
+
+}
+@media only screen and (max-width : 640px) {
+    .about__main-photo {
+        width: 45%;
+    }
+    .about__main-text {
+        width: 52%;
+        margin: rem(60px) 3% 0 0;
+    }
+    .about__main-video {
+        clear: both;
+        float: none;
+        width: auto;
+        margin: 0;
+    }
+}
+@media only screen and (max-width : 480px) {
+    .about__main-photo {
+        float: none;
+        width: auto;
+    }
+    .about__main-photo-img {
+
+    }
+    .about__main-text {
+        float: none;
+        width: auto;
+        margin: rem(40px) 0 0 0;
+    }
+}
+
+@media only screen and (max-width : 320px) {
+
+}

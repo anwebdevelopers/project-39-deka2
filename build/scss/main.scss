@@ -1,0 +1,138 @@
+@import "bourbon";
+@import "components/vars.scss";
+@import "components/normalize.scss";
+@import "components/fonts.scss";
+
+input:focus::-webkit-input-placeholder {color: transparent}
+input:focus::-moz-placeholder          {color: transparent}
+input:focus:-moz-placeholder           {color: transparent}
+input:focus:-ms-input-placeholder      {color: transparent}
+
+*::-webkit-input-placeholder {
+	color: transparentize($font-color, .3);
+	opacity: 1;
+}
+*:-moz-placeholder {
+	color: transparentize($font-color, .3);
+	opacity: 1;
+}
+*::-moz-placeholder {
+	color: transparentize($font-color, .3);
+	opacity: 1;
+}
+
+*:-ms-input-placeholder {
+	color: transparentize($font-color, .3);
+	opacity: 1;
+}
+
+*,
+*:before,
+*:after{
+	box-sizing: border-box;
+}
+html {
+	font-size: 16px;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 17px;
+	min-width: 320px;
+	position: relative;
+	line-height: 1.4;
+	font-weight: 300;
+	font-family: 'Roboto', sans-serif;
+	color: $font-color;
+	background-color: #fff;
+	overflow-x: hidden;
+}
+.container {
+	max-width: 1130px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.hidden {
+	display: none;
+}
+a {
+	outline: none !important;
+}
+.button {
+	a, button {
+		@include btn;
+		text-decoration: none;
+		color: #000;
+		display: inline-block;
+		vertical-align: top;
+		padding: rem(18px) rem(40px);
+        font-size: rem(18px);
+		font-family: 'Roboto', sans-serif;
+		font-weight: 400;
+		border: 2px solid #ffda91;
+		border-radius: 2px;
+		background-color: #ffc54f;
+		background-image: linear-gradient(to bottom, #ffd172, transparentize(#fff, 1));
+		cursor: default;
+		transition: all .5s ease;
+        &:hover, &:active, &:focus {
+            background-color: darken(#ffc54f, 20%);
+        }
+	}
+}
+.title {
+	position: relative;
+	padding: 0 0 rem(30px) 0;
+	color: $font-color;
+	h2 {
+		margin: 0;
+		font-size: rem(34px);
+		line-height: 1.2;
+		font-weight: 300;
+	}
+	span {
+		font-size: rem(42px);
+		color: $accent-color;
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		height: rem(4px);
+		width: rem(90px);
+		background-color: transparentize($accent-color, .5);
+	}
+}
+
+//Custom Styles Here
+@import "components/header.scss";
+@import "components/registration.scss";
+@import "components/about.scss";
+@import "components/delegates.scss";
+@import "components/advantages.scss";
+@import "components/speakers.scss";
+@import "build/scss/components/magnific-popup.scss";
+@import "components/program.scss";
+@import "components/map.scss";
+@import "components/parthners.scss";
+@import "components/footer.scss";
+
+//@import "build/scss/components/magnific-popup.scss";
+
+//ALWAYS END
+@import "components/media.scss";
+
+//Load Libs SASS
+//@import "html/libs/animate/animate.sass";
+@import "html/libs/owl.carousel/dist/assets/owl.carousel.min";
+//@import "html/libs/superfish/dist/css/superfish";
+//@import "html/libs/font-awesome/scss/font-awesome.scss";
+//@import "html/libs/jQuery.mmenu/dist/css/jquery.mmenu.all";
+@import "html/libs/magnific-popup/dist/magnific-popup";
+@import "html/libs/jquery-ui-1.12.1.custom/jquery-ui.min";

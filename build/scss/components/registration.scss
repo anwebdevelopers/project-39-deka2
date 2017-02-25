@@ -1,0 +1,119 @@
+.registration {
+    position: relative;
+    z-index: 2;
+    margin-top: rem(-110px);
+}
+.registration__container {
+    @extend .container;
+}
+.registration__box {
+    padding: rem(20px) rem(30px);
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 10px 38px 1px transparentize(#000, .8);
+}
+.registration__title {
+    font-size: rem(20px);
+    font-weight: 300;
+    line-height: 1.3;
+    b {
+        font-weight: 500;
+        color: $accent-color;
+    }
+}
+.registration__form {
+    margin: rem(15px) 0 0 0;
+    font-size: 0;
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid #cfced6;
+}
+.registration__form-item {
+    display: inline-block;
+    vertical-align: top;
+    width: 31%;
+    margin: rem(20px) 3.5% 0 0;
+    &:nth-child(3n+3) {
+        margin: rem(20px) 0 0 0;
+    }
+    input {
+        outline: none;
+        box-shadow: none;
+        background-color: transparent;
+        display: block;
+        width: 100%;
+        height: rem(60px);
+        padding: 0 rem(15px);
+        border: 2px solid transparentize($font-color, .8);
+        border-radius: 2px;
+        line-height: rem(60px);
+        font-size: rem(18px);
+        font-weight: 300;
+        color: $font-color;
+        transition: all .5s ease;
+        &.error {
+            border-color: transparentize($accent-color, .7);
+        }
+    }
+    button {
+        width: 100%;
+    }
+    label.error {
+        font-size: 0;
+    }
+}
+.registration__text {
+    margin: rem(20px) 0 0 0;
+    font-size: rem(14px);
+    b {
+        font-weight: 500;
+        color: $font-color;
+        text-decoration: underline;
+    }
+}
+
+
+@media only screen and (max-width : 1130px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+    .registration__form-item {
+        width: 45%;
+        margin: rem(20px) 5% 0 0;
+        &:nth-child(3n+3) {
+            margin: rem(20px) 5% 0 0;
+        }
+        &:nth-child(2n+2) {
+            margin: rem(20px) 0 0 0;
+        }
+    }
+}
+
+@media only screen and (max-width : 640px) {
+
+}
+@media only screen and (max-width : 480px) {
+    .registration__form {
+        display: block;
+    }
+    .registration__form-item {
+        display: block;
+        width: auto;
+        margin: rem(20px) 0 0 0;
+        &:nth-child(3n+3) {
+            margin: rem(20px) 0 0 0;
+        }
+        &:nth-child(2n+2) {
+            margin: rem(20px) 0 0 0;
+        }
+    }
+}
+
+@media only screen and (max-width : 320px) {
+
+}

@@ -1,0 +1,198 @@
+.footer {
+    padding: rem(60px) 0;
+    background-color: #fff;
+}
+.footer__container {
+    @extend .container;
+}
+.footer__box {
+    @extend .clearfix;
+    display: flex;
+
+}
+.footer__contacts {
+    float: left;
+    width: 50%;
+}
+.footer__contacts-title {
+    font-size: rem(23px);
+}
+.footer__contacts-phone {
+    margin: rem(10px) 0 0 0;
+}
+.footer__contacts-phone-item {
+    font-size: rem(18px);
+    line-height: 1.2;
+    a {
+        text-decoration: none;
+        color: $font-color;
+        font-size: rem(20px);
+        font-weight: 400;
+        transition: all .5s ease;
+        &:hover, &:active, &:focus {
+            color: $accent-color;
+        }
+    }
+}
+.footer__contacts-links {
+    margin: rem(10px) 0 0 0;
+    font-size: rem(20px);
+    line-height: 1.2;
+    a {
+        margin: 0 rem(10px) 0 0;
+        color: $font-color;
+        transition: all .5s ease;
+        &:hover, &:active, &:focus {
+            color: $accent-color;
+        }
+    }
+}
+.footer__contacts-logo {
+    margin: rem(25px) 0 0 0;
+    img {
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
+}
+.footer__organaizer {
+    float: right;
+    width: 46%;
+    margin: rem(30px) 0 0 4%;
+    text-align: right;
+}
+.footer__organaizer-title {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 rem(30px) 0 0;
+    font-size: rem(23px);
+    line-height: 1.2;
+}
+.footer__organaizer-logo {
+    display: inline-block;
+    vertical-align: middle;
+    img {
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
+}
+.popup {
+    position: relative;
+    max-width: 390px;
+    width: 100%;
+    margin: 0 auto;
+    padding: rem(40px) rem(30px);
+    background-color: #fff;
+    border-radius: 8px;
+}
+.popup__title {
+    font-size: rem(18px);
+    text-align: center;
+    b {
+        display: block;
+        margin: 0 0 rem(10px) 0;
+        color: $accent-color;
+        font-size: rem(25px);
+    }
+}
+.popup__form {
+    font-size: 0;
+}
+.popup__form-item {
+    margin: rem(20px) 0 0 0;
+    input {
+        outline: none;
+        box-shadow: none;
+        background-color: transparent;
+        display: block;
+        width: 100%;
+        height: rem(60px);
+        padding: 0 rem(15px);
+        border: 2px solid transparentize($font-color, .8);
+        border-radius: 2px;
+        line-height: rem(60px);
+        font-size: rem(18px);
+        font-weight: 300;
+        color: $font-color;
+        transition: all .5s ease;
+        &.error {
+            border-color: transparentize($accent-color, .7);
+        }
+    }
+    button {
+        width: 100%;
+    }
+    label.error {
+        font-size: 0;
+        height: 0;
+    }
+}
+
+.gratitude {
+    position: relative;
+    max-width: 390px;
+    width: 100%;
+    margin: 0 auto;
+    padding: rem(40px) rem(30px);
+    background-color: #fff;
+    border-radius: 8px;
+}
+.gratitude__text {
+    font-size: rem(20px);
+    text-align: center;
+    b {
+        display: block;
+        margin: 0 0 rem(10px) 0;
+        color: $accent-color;
+        font-size: rem(31px);
+    }
+}
+@media only screen and (max-width : 1130px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+    .footer__organaizer {
+        margin: 0 0 0 4%;
+    }
+    .footer__organaizer-title {
+        display: block;
+        margin: 0;
+        br {
+            display: none;
+        }
+    }
+    .footer__organaizer-logo {
+        display: block;
+        margin: rem(20px) 0 0 0;
+    }
+}
+@media only screen and (max-width : 768px) {
+
+}
+@media only screen and (max-width : 640px) {
+
+}
+@media only screen and (max-width : 480px) {
+    .footer__box {
+        display: block;
+        text-align: center;
+    }
+    .footer__contacts {
+        float: none;
+        width: auto;
+    }
+    .footer__organaizer {
+        float: none;
+        width: auto;
+        text-align: center;
+    }
+    .footer__organaizer-title {
+        margin: rem(30px) 0 0 0;
+    }
+}
+
+@media only screen and (max-width : 320px) {
+
+}
